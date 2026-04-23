@@ -1,0 +1,37 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+
+# Model weights (download separately)
+*.pt
+*.pth
+*.weights
+!models/.gitkeep
+
+# Data and results
+data/*
+!data/.gitkeep
+results/
+*.mp4
+*.avi
+*.mov
+
+# Images (don't commit test frames)
+*.jpg
+*.jpeg
+*.png
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store

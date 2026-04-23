@@ -1,0 +1,20 @@
+detector:
+  model: yolov8n.pt
+  conf_threshold: 0.5
+  iou_threshold: 0.45
+  classes: [0]          # 0 = person
+
+extractor:
+  feature_dim: 128
+  input_size: [128, 64] # [H, W] crop fed to ResNet-50
+
+tracker:
+  max_cosine_distance: 0.3
+  max_iou_distance: 0.7
+  max_age: 30
+  n_init: 3
+  nn_budget: 100        # max appearance features stored per track
+
+kalman:
+  std_weight_position: 0.05
+  std_weight_velocity: 0.00625
