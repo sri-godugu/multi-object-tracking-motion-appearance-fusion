@@ -6,8 +6,8 @@ from .detection import Detection
 class Detector:
     """YOLOv8-based object detector."""
 
-    def __init__(self, model_path="yolov8n.pt", conf_threshold=0.5,
-                 iou_threshold=0.45, classes=None, device=None):
+    def __init__(self, model_path="yolov8n.pt", conf_threshold=0.6,
+                 iou_threshold=0.55, classes=None, device=None):
         self.model = YOLO(model_path)
         self.conf_threshold = conf_threshold
         self.iou_threshold = iou_threshold
