@@ -10,6 +10,7 @@ class FeatureExtractor(nn.Module):
     """
     ResNet-50 backbone projecting detection crops to 128-d L2-normalised embeddings.
     Weights are ImageNet-pretrained; no re-ID fine-tuning required for basic use.
+
     """
 
     def __init__(self, model_path=None, device="cpu"):
