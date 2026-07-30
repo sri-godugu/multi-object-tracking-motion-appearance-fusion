@@ -3,7 +3,7 @@ import numpy as np
 
 class Detection:
     """Bounding box detection in [x, y, w, h] (top-left + dims) format."""
-
+    
     def __init__(self, tlwh, confidence, class_id=0):
         self.tlwh = np.asarray(tlwh, dtype=float)
         self.confidence = float(confidence)
