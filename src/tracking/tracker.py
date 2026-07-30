@@ -5,10 +5,9 @@ from ..association import iou_matching, nn_matching, linear_assignment
 
 class Tracker:
     """
-    DeepSORT-style multi-object tracker.
-
+    DeepSORT-style multi-object tracker
     Each call to update() runs the full pipeline:
-      Predict → Cascade appearance match → IoU fallback match → Track update
+            Predict → Cascade appearance match → IoU fallback match → Track update
     """
 
     def __init__(self, max_cosine_distance=0.3, max_iou_distance=0.7,
